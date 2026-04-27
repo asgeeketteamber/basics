@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{%block header %}
+  <h1>{% block title %}register{% endblock %}</h1>
+  {% endblock %}
+  {% block content %}
+  <form method="post">
+    <label for="username"> Username</label>
+    <input name="username" id="username" required>
+    <!--The input tags are using the required attribute here. This tells the browser not to submit the
+     form until those fields are filled in. 
+    -->
+    <label for="password">Password</label>
+        <input type="password" name="password" id="password" required>
+        <input type="submit" value ="register">
+  </form>
+{% endblock %}
+
+
